@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Countries App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Built using React, fetches REST countries API data using axios and displays information on screen. Added search feature on main countries page to quickly find a country. Hosted project on github pages. Added own personal favicon to the project.
 
-## Available Scripts
+BrowserRouter used for routing between the two main pages, countries and country. 
+Header and Footer components rendered across both routes.
+Axios installed through npm.
 
-In the project directory, you can run:
+github pages link HERE
 
-### `npm start`
+github repo link HERE
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+codeSandbox?
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Countries Page
 
-### `npm test`
+Uses useEffect and Axios to fetch the api data for all countries. Then uses setState to set the response.json to the countries variable. This is then mapped over and each individual countries data is rendered, as a link to that particular countries page. Link is used from react-router-dom to generate a link to the particular country by setting the country.name variable to the final part of the url.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This component renders all countries when searchTerm is an empty string. When the user uses the search box the handleChange function is called, which uses setState to set searchTerm to the event.target.value. Then the component renders countries with names that contain the search term.
 
-### `npm run build`
+Added a search function to the app to quickly locate a country, instead of having to scroll through the 250 countries individually. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Country Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Country component fetches two pieces of data from REST Countries.
+First, it fetches the information for the name of the country whose page has been rendered. This is achieved using useParams in React. Then setState is used generate the countries data from the API. This object is then mapped over to generate the country information. 
+Currencies and Languages are individually mapped over to get the correct data, each within a span.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Secondly, all countries data is generated using the same method as the Countries component.
+This data is used in generating the bordering countries buttons, which link to each bordering countries page. The border buttons themselves contain the alpha3code of the country. When any of these buttons are clicked, the handleClick function is called , which converts the event.target.value into the corresponding country name. I used the all api data object to get the country name that corresponds to this alpha3code, and use history.push to redirect to that country, which re-renders the Country component with the selected bordering country data.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -1,38 +1,208 @@
+/* universal css */
+
 .App {
   text-align: center;
+  overflow: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin-top: 0%;
+  margin-bottom: 0%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.headerLink {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.headerText {
+  font-size: 3.5rem;
+  color: #fff;
+  /* color: #000; */
+  margin: 0% 5%;
+  padding: 2.5% 0% 1% 0%;
+}
+
+.searchBar {
+  margin: 1% 10% 5% 10%;
+  padding: 1.5%;
+}
+
+.searchBar:hover {
+  box-shadow: 1px 1px #000;
+}
+
+input[type="text"] {
+  width: 30%;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+input[type="text"]:focus {
+  width: 60%;
+}
+
+/* countries page styles  */
+
+.header,
+.mainContent,
+.bordering,
+.Footer {
+  /* background-color: #334257; */
+  background-color: #222831;
+  /* background-color: #17223B; */
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+.mainContent {
+  min-height: 110vh;
+  margin-top: 0%;
+}
+
+.Footer p {
+  margin: 0%;
+  padding-bottom: 1%;
+  color: #fff;
+}
+
+.countries {
+  margin: 0;
+}
+
+.countryCardMain p {
+  font-size: 1.5rem;
+}
+
+.countryCardMain,
+.singleCountryCard {
+  margin: 0% 5% 5% 5%;
+  border: 1px solid #fff;
+  /* background-color: #476072; */
+  background-color: #393e46;
+  /* background-color: #263859; */
+  color: #fff;
+  transition: 0.4s;
+}
+
+.mainCardLink {
+  text-decoration: none;
+}
+
+.countryCardMain:hover {
+  /* background-color: #00ADB5; */
+  background-color: #6b778d;
+  box-shadow: 0 10px 10px #000;
+}
+
+.flag {
+  width: 100%;
+  margin-bottom: 5%;
+  float: left;
+}
+
+.topInfoMain,
+.popInfoMain {
+  margin: 2.5% 5%;
+  text-align: left;
+}
+
+.popInfoMain {
+  margin-bottom: 5%;
+}
+
+/* single country page styles  */
+
+.infoFlag {
+  width: 75%;
+  margin: 10% 10% 5%;
+  border: 1px solid #fff;
+}
+
+.singleCountryCard {
+  border: 1px solid #fff;
+  text-align: left;
+}
+
+.singleCountryCard p {
+  margin-left: 2%;
+  margin-right: 30%;
+  word-wrap: break-word;
+}
+
+.backBtn {
+  position: absolute;
+  top: 75px;
+  left: 25px;
+  margin: 2% 1%;
+  padding: 1% 2%;
+  box-shadow: 0 2.5px 2.5px #000;
+  color: #fff;
+  background-color: #222831;
+}
+
+.backBtn:hover {
+  background-color: #6b778d;
+  box-shadow: 5px 5px #000;
+}
+
+.bordering {
+  text-align: left;
+  color: #fff;
+  padding: 0% 5% 0% 5%;
+}
+
+.bordering p {
+  margin: 0%;
+  padding-bottom: 5%;
+}
+
+.btn-group {
+  background-color: #000;
+}
+
+.border-btn {
+  float: left;
+  height: 40px;
+  width: 50px;
+  margin: 1% 2%;
+  padding: 1%;
+  color: #fafafa;
+  background-color: #393e46;
+}
+
+.border-btn:hover {
+  background-color: #fafafa;
+  color: #393e46;
+  box-shadow: 1px 1px #000;
+}
+
+/* responsive css */
+
+@media screen and (min-width: 900px) {
+  .countries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .countryCardMain {
+    height: 95%;
+  }
+  .infoFlag {
+    margin: 2%;
+    width: 25%;
+  }
+  .singleCountryCard {
+    height: 45%;
+    margin: 2% 20% 5%;
+  }
+  .bordering {
+    text-align: left;
+    color: #fff;
+    margin: 0% 5% 0% 5%;
+  }
+  .mainContent {
+    min-height: 160vh;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
