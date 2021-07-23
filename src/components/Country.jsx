@@ -39,7 +39,7 @@ function Country() {
           <button className="backBtn">&lt; Back</button>
         </Link>
         <img className="infoFlag" src={country.flag} alt={country.name} />
-        <div className="singleCountryCard" key={index}>
+        <div className="singleCountryCard">
           <p>
             <b>
               {country.name} ( {country.nativeName} )
