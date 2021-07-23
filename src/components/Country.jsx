@@ -34,12 +34,12 @@ function Country() {
     const currency = country.currencies;
 
     return (
-      <div className="countryInfo" key={index}>
+      <div className="countryInfo" >
         <Link to="/">
           <button className="backBtn">&lt; Back</button>
         </Link>
         <img className="infoFlag" src={country.flag} alt={country.name} />
-        <div className="singleCountryCard">
+        <div className="singleCountryCard" key={index}>
           <p>
             <b>
               {country.name} ( {country.nativeName} )
