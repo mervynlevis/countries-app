@@ -91,7 +91,6 @@ function Country() {
 
   const renderBorders = (borderCountry, index) => {
     const borders = borderCountry.borders;
-    const borderingCountryCodes = borderCountry.borders;
 
     return (
       <div className="bordering">
