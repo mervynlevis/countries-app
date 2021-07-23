@@ -2,13 +2,13 @@
 
 Built using React, fetches REST countries API data using axios and displays information on screen. Added search feature on main countries page to quickly find a country.
 
-BrowserRouter used for routing between the two main pages, countries and country. 
+BrowserRouter used for routing between the two main pages, Countries and Country. 
 Header and Footer components rendered across both routes.
 Axios and react-router-dom installed through npm.
 
 project located on codesandbox
 
-https://codesandbox.io/s/cranky-cache-mervynlevis-6661m?file=/src/App.css
+https://codesandbox.io/s/cranky-cache-mervynlevis-6661m
 
 
 # Countries Page
@@ -27,3 +27,7 @@ Currencies and Languages are individually mapped over to get the correct data, e
 
 Secondly, all countries data is generated using the same method as the Countries component.
 This data is used in generating the bordering countries buttons, which link to each bordering countries page. The border buttons themselves contain the alpha3code of the country. When any of these buttons are clicked, the handleClick function is called , which converts the event.target.value into the corresponding country name. I used the all api data object to get the country name that corresponds to this alpha3code, and use history.push to redirect to that country, which re-renders the Country component with the selected bordering country data.
+
+# Error Page
+
+Added simple 404 page for any route outside of Countries and Country, user taken to 404 page with link back to Countries page.
