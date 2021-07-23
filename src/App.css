@@ -43,11 +43,42 @@ input[type="text"]:focus {
   width: 60%;
 }
 
+.error {
+  height: 100vh;
+  padding: auto 10%;
+}
+
+.error,
+.error a {
+  color: #fff;
+}
+
+.error a {
+  text-decoration: none;
+}
+
+.errorHeading {
+  margin-top: 0%;
+  padding-top: 5%;
+}
+
+.homeBtn {
+  height: 50px;
+  width: 100px;
+  margin-top: 2.5%;
+}
+
+.homeBtn:hover {
+  color: #fff;
+  background-color: #222831;
+}
+
 /* countries page styles  */
 
 .header,
 .mainContent,
 .bordering,
+.error,
 .Footer {
   /* background-color: #334257; */
   background-color: #222831;
@@ -205,4 +236,3 @@ input[type="text"]:focus {
     min-height: 160vh;
   }
 }
-

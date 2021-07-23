@@ -13,8 +13,8 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path="/countries-app" component={Countries} />
-          <Route exact path="/countries-app/:name" component={Country} />
+          <Route exact path="/" component={Countries} />
+          <Route exact path="/:name" component={Country} />
           <Route component={Error} />
         </Switch>
         <Footer />

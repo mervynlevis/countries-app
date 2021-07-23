@@ -7,7 +7,7 @@ function Country() {
   const [countries, setCountries] = useState([]);
   const { name } = useParams();
 
-  const history = useHistory('');
+  const history = useHistory("");
 
   // get current country info from api call
 
@@ -35,7 +35,7 @@ function Country() {
 
     return (
       <div className="countryInfo">
-        <Link to="/countries-app">
+        <Link to="/">
           <button className="backBtn">&lt; Back</button>
         </Link>
         <img className="infoFlag" src={country.flag} alt={country.name} />
@@ -86,7 +86,7 @@ function Country() {
       if (event.target.value === country.alpha3Code) {
         console.log(country.alpha3Code);
         console.log(country.name);
-        history.push(`/${country.name}`);
+        history.push(`./${country.name}`);
         window.location.reload();
       }
     });
@@ -121,8 +121,12 @@ function Country() {
 
   return (
     <div className="mainContent">
-      <div className="countriesSingle">{country.slice(0,1).map(renderCountry)}</div>
-      <div className="borderLinks">{country.slice(0,1).map(renderBorders)}</div>
+      <div className="countriesSingle">
+        {country.slice(0, 1).map(renderCountry)}
+      </div>
+      <div className="borderLinks">
+        {country.slice(0, 1).map(renderBorders)}
+      </div>
     </div>
   );
 }
