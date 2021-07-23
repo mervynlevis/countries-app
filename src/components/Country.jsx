@@ -34,7 +34,7 @@ function Country() {
     const currency = country.currencies;
 
     return (
-      <div className="countryInfo">
+      <div className="countryInfo" key={index}>
         <Link to="/">
           <button className="backBtn">&lt; Back</button>
         </Link>
@@ -93,7 +93,7 @@ function Country() {
     const borders = borderCountry.borders;
 
     return (
-      <div className="bordering">
+      <div className="bordering" key={index}>
         <p>Bordering Countries</p>
         <div className="btn-group">
           {borders.map((borderName) => {
