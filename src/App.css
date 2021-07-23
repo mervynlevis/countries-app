@@ -18,7 +18,6 @@ body {
 .headerText {
   font-size: 3.5rem;
   color: #fff;
-  /* color: #000; */
   margin: 0% 5%;
   padding: 2.5% 0% 1% 0%;
 }
@@ -26,6 +25,9 @@ body {
 .searchBar {
   margin: 1% 10% 5% 10%;
   padding: 1.5%;
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid #fff;
 }
 
 .searchBar:hover {
@@ -161,7 +163,7 @@ input[type="text"]:focus {
   word-wrap: break-word;
 }
 
-.backBtn {
+/* .backBtn {
   position: absolute;
   top: 75px;
   left: 25px;
@@ -170,11 +172,22 @@ input[type="text"]:focus {
   box-shadow: 0 2.5px 2.5px #000;
   color: #fff;
   background-color: #222831;
+} */
+
+.backBtn {
+  position: absolute;
+  top: 75px;
+  left: 25px;
+  margin: 2% 1%;
+  padding: 1% 2%;
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid #fff;
 }
 
 .backBtn:hover {
   background-color: #6b778d;
-  box-shadow: 5px 5px #000;
+  box-shadow: 2px 2px #000;
 }
 
 .bordering {
@@ -192,7 +205,7 @@ input[type="text"]:focus {
   background-color: #000;
 }
 
-.border-btn {
+/* .border-btn {
   float: left;
   height: 40px;
   width: 50px;
@@ -200,6 +213,15 @@ input[type="text"]:focus {
   padding: 1%;
   color: #fafafa;
   background-color: #393e46;
+} */
+
+.border-btn {
+  float: left;
+  margin: 1% 2%;
+  padding: 1% 3%;
+  background-color: transparent;
+  color: #fff;
+  border: 1.5px solid #fff;
 }
 
 .border-btn:hover {

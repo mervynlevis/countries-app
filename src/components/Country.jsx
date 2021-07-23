@@ -46,7 +46,7 @@ function Country() {
             </b>
           </p>
           <p>
-            <b>Capital:</b> {country.capital}
+            <b>Capital:</b> {country.capital} 
           </p>
           <p>
             <b>Region:</b> {country.region}
@@ -58,7 +58,7 @@ function Country() {
             <b>Population:</b> {country.population.toLocaleString()}
           </p>
           <p>
-            <b>Timezone:</b> {country.timezones} &nbsp;
+            <b>Timezone:</b> {country.timezones.join(', ')} &nbsp;
           </p>
           <p>
             <b>Currency:</b>{" "}
@@ -80,12 +80,9 @@ function Country() {
   // this function gets the full country name from the border countries, want to use it to redirect to that countries page onClick
 
   function handleClick(event) {
-    console.log(event.target.value);
 
     countries.map((country) => {
       if (event.target.value === country.alpha3Code) {
-        console.log(country.alpha3Code);
-        console.log(country.name);
         history.push(`./${country.name}`);
         window.location.reload();
       }
@@ -95,9 +92,6 @@ function Country() {
   const renderBorders = (borderCountry, index) => {
     const borders = borderCountry.borders;
     const borderingCountryCodes = borderCountry.borders;
-    console.log("codes: " + borderingCountryCodes);
-
-    console.log(countries);
 
     return (
       <div className="bordering">

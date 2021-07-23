@@ -43,7 +43,7 @@ function Countries() {
       );
     } else if (country.name.toLowerCase().includes(searchTerm.toLowerCase())) {
       return (
-        <Link className="mainCardLink" to={`/countries-app/${country.name}`}>
+        <Link className="mainCardLink" to={`/${country.name}`}>
           <div className="countryCardMain" key={index}>
             <img className="flag" src={country.flag} alt={country.name} />
             <p className="topInfoMain">
@@ -68,7 +68,6 @@ function Countries() {
 
   function handleChange(event) {
     setSearchTerm(event.target.value);
-    console.log(searchTerm);
   }
 
   return (
